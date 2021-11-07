@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/client
     docker:
-      - image: circleci/node:12.22.1-browser
+      - image: circleci/node:12
     steps:
       - checkout
       - restore_cache:
