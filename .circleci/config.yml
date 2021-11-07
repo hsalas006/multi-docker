@@ -8,12 +8,12 @@ jobs:
       - checkout
       - run: cd client/; ls -la; pwd;
       - restore_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          key: npm-cache-v1-{{ checksum "package.json" }}
       - run:
           name: Install Dependencies
           command: npm ci
       - save_cache:
-          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          key: npm-cache-v1-{{ checksum "package.json" }}
           paths:
             - /home/circleci/.npm
       - run:
